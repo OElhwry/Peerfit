@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.white-box {
+  background-color: white;
+  width: 50%;
+  height: 575px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p{
+  font-size: 22px;
+}
+
+li{
+  font-size: 18px;
+}
+
+
+.hover-content {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #333; /* Darken the sidebar background color */
+  color: #fff; /* Text color */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.sidebar a {
+  padding: 10px 5px; /* Add padding to links */
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+}
+
+.sidebar a.help-button {
+  margin-top: auto;
+}
+
+.sidebar a:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #555; /* Darker line color */
+}
+
+.sidebar a:last-child .logo img {
+  margin-right: 5px;
+}
+
+.sidebar a:last-child .logo {
+  margin-top: auto;
+}
+
+.sidebar a:hover {
+  background-color: #444; /* Darken on hover */
+}
+
+.secondary-sidebar {
+    height: 100%;
+    width: 350px;
+    background-color: white;
+    color: #333; /* Text color */
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  
+  .secondary-sidebar a {
+    padding: 10px 15px;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, background-color 0.3s;
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* Lighter border color */
+    display: flex; /* Ensure each link is on a new line */
+  }
+  
+  .secondary-sidebar a:hover {
+    color: #007bff; /* Blue on hover */
+    background-color: #f0f0f0;
+  }
+  
+  .secondary-sidebar a:hover::after {
+    content: '￫';
+    font-size: 16px;
+    margin-left: auto;
+    font-weight: bold;
+  }
+
+.content {
+    padding: 20px;
+    margin-left: 250px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar a.active {
+    background-color: #555;
+  }
+  
+  .sidebar .icon {
+    background-color: #c2e8c2;
+    width: 100%;
+  }
+
+
+  .account-info {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .account-info form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .account-info label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .account-info input[type="text"],
+  .account-info input[type="email"],
+  .account-info input[type="password"],
+  .account-info select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .account-info input[type="submit"] {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .account-info input[type="submit"]:hover {
+    background-color: #34495E;
+  }
+
+  .profile-pic-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.upload-form {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.profile-pic-container:hover .upload-form {
+    display: flex;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.label-file {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: darkblue;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-upload {
+    margin-top: 10px;
+    padding: 5px 20px;
+    background: lightgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+textarea#bio {
+  resize: none;
+  min-height: 100px;
+}

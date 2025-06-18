@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 1000px;
+    height: 650px;
+  }
+  
+  .left-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 50%;
+  }
+  
+  .brand-logo {
+    max-width: 250px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 120px;
+  }
+  
+  .right-section {
+    padding: 20px;
+    width: 50%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 46px;
+    font-family: system-ui;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    background-color: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px; /* Adjust padding */
+    border: none;
+  }
+  
+  /* Adjust the styles for the email input */
+  #email {
+    background-image: url('Images/mail.png'); /* Adjust the image path */
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    background-size: 15px;
+  }
+  
+  /* Adjust the styles for the password input */
+  #password {
+    background-image: url('Images/lock.png'); /* Adjust the image path */
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    background-size: 15px;
+  }
+  
+  
+  button {
+    font-family:'Gill Sans MT';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    margin-left: 100px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  
+  a {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-button .create-account-link {
+    display: flex;
+    align-items: center;
+    margin-left: 185px; /* Adjust margin-left to move it to the right */
+    padding-top: 100px;
+}
+
+.signup-button span {
+    margin-left: 5px;
+}
+
+  p{
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px; /* Adjust the font size as needed */
+    margin-left: 100px;
+  }
+  

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    color: #707070; /* Low contrast grey color */
+}
+
+.signup-box {
+    width: 350px;
+    max-height: 625px;
+    overflow-y: auto;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.interest-option {
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust spacing between options */
+    padding: 8px;
+  }
+
+  input[type="checkbox" i] {
+    margin-left: 15px;
+}
+  
+
+
+.signup-box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black; /* Black color for the heading */
+}
+
+.signup-box h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #707070; /* Low contrast grey color for the subheading */
+}
+
+.signup-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #707070; /* Low contrast grey color for the labels */
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Remove border */
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    border-radius: 0; /* Remove border-radius */
+    outline: none; /* Remove outline */
+}
+
+.signup-box input::placeholder {
+    color: #ccc; /* Placeholder color */
+}
+
+.signup-box .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #c2e8c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.signup-box .btn:hover {
+    background-color: #6aac6e;
+}
+
+.sidebar {
+    width: 350px;
+    height: 645px;
+    background-color: #c2e8c2; /* Light green background color */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.peerfit-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.already-have-account {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color:white
+}
+
+.logo img {
+    max-width: 100%; /* Limit the image to the container's width */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block;
+}
+
+.signin-button {
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px; /* Border radius to create a rounded shape */
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: 15px;
+}
+
+.signin-button:hover {
+    background-color: rgba(76, 175, 80, 0.1); /* Adjust hover background color with transparency */
+}
+
+p{
+    font-size: 12px;
+    text-align: center;
+}
+
+a{
+    color: #c2e8c2;
+}
+
+.form-section {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space out the child elements */
+    flex-wrap: wrap; /* Allow items to wrap if not enough space */
+  }
+  
+  .gender-options {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .gender-option {
+    margin-right: 65px; /* Space between the gender options */
+  }
+

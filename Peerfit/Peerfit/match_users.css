@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%; /* Ensure that the container takes the full width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+.user-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  width: 100%; /* Full width to fill container */
+  max-width: 500px; /* Maximum width to ensure cards are not too wide on larger screens */
+  margin: 0 auto 20px; /* Center cards and add spacing between them */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.user-card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow for depth effect */
+}
+
+.user-card h2, .user-card p {
+  text-align: center; /* Center-align text for consistency */
+}
+
+.user-card h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 0.5rem; /* Add some spacing below the title */
+}
+
+.user-card p {
+  font-size: 16px;
+  color: #777;
+}
+
+.message-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Ensure spacing above button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for color and press effect */
+}
+
+.message-button:hover {
+  background-color: #0056b3;
+}
+
+.message-button:active {
+  transform: scale(0.98); /* Slight shrink effect to simulate a button press */
+}
+
+/* Additional classes for different button states, if needed */
+.message-button.follow {
+  background-color: #28a745; /* Green for follow action */
+}
+
+.message-button.requested {
+  background-color: #ffc107; /* Yellow for requested state */
+}
+
+.message-button.message {
+  background-color: #17a2b8; /* Different color for message action, if you want to distinguish */
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.pagination a, .pagination .current-page {
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+  border: 1px solid transparent;
+}
+
+.pagination .current-page {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.no-match {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+/* General body styling */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px; /* Consider a slightly smaller font for general text */
+  background-color: #f5f5f5; /* A light background to keep things fresh */
+  color: #333; /* Darker text for contrast */
+  padding: 20px; /* Add some padding around the body content */
+}
+
+/* Styling for the welcome message */
+.welcome-message {
+  font-size: 20px; /* Larger font size for emphasis */
+  color: #2a2a2a; /* Slightly darker color for the welcome message */
+  background-color: #e8f0fe; /* A soft background color to highlight the message */
+  border-left: 4px solid #007bff; /* A colored border on the left for attention */
+  padding: 20px; /* Padding inside the message box */
+  margin: 20px 0; /* Margin around the message for spacing */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+}
+
+/* Styling for the link within the welcome message */
+.welcome-message a {
+  color: #007bff; /* A bright color for the link for visibility */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: 600; /* Makes the link bold for emphasis */
+}
+
+.welcome-message a:hover {
+  text-decoration: underline; /* Adds underline on hover for a classic link appearance */
+}
+
+.filter-search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e8f0fe;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-search-form form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px; /* Adjust according to your layout */
+  align-items: center;
+}
+
+.filter-search-form input[type="text"], 
+.filter-search-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+}
+
+.filter-search-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  transition: background-color 0.3s;
+}
+
+.filter-search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-search-form form {
+    flex-direction: column;
+  }
+
+  .filter-search-form input[type="text"],
+  .filter-search-form select,
+  .filter-search-form button {
+    width: 100%; /* Ensure full-width elements on smaller screens */
+  }
+}
+
+.user-card a {
+  color: #007bff; /* Standard link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the name stand out */
+  transition: color 0.3s;
+}
+
+.user-card a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline on hover for emphasis */
+}
+

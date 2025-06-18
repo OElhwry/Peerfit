@@ -1,0 +1,146 @@
+/* Import the Google font and reset body styling */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.interests-container {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 65px; /* Adjusted to avoid overlapping with the button */
+    overflow-y: auto; /* Scroll only for the interests list */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.interests-header,
+.category-tabs {
+  background-color: #efe7ef; /* Same background color for header and tabs */
+}
+
+.interests-header {
+  padding: 20px;
+  text-align: center;
+  color: #564a4a;
+}
+
+.interests-header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.interests-header p {
+  font-size: 16px;
+  margin-bottom: 10px; /* Reduced to match the height of the tabs section */
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: space-around; /* Space out tabs evenly */
+  padding: 10px 0;
+  margin: 0;
+  overflow: hidden; /* Hide scrollbar */
+}
+
+.tab {
+  background-color: transparent; /* No background color */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #564a4a; /* Same color as header text for consistency */
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.tab:hover {
+  color: #c855c1; /* Purple text on hover */
+}
+
+.tab.active {
+  color: #c855c1; /* Purple text for selected tab */
+  font-weight: bold;
+  text-decoration: underline; /* Underline for selected tab */
+}
+
+.category-content {
+    height: 400px; /* Adjusted to account for header and button height */
+    overflow-y: auto;
+}
+
+
+
+.category {
+    /* ... your other styles ... */
+    display: flex; /* Use flexbox to align interests */
+    flex-wrap: wrap;
+    align-content: flex-start; /* Aligns content to the top */ /* Make sure the category takes the full height of its parent */
+    overflow-y: auto; /* Enable scrolling within each category */
+  }
+
+.interest {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  font-size: 16px;
+  border: 2px solid transparent;
+  flex: 1 0 21%; /* Adjust the percentage to control number of items per row */
+  margin: 5px; /* Ensure there's a gap between items */
+  /* Other styles remain the same */
+}
+
+.interest:hover{
+    background-color: #e8e8e8; /* Or any color you prefer for hover */
+    transform: translateY(-3px);
+    /* border-color: #c855c1; Remove this if you don't want border on hover */
+      
+}
+.interest.selected {
+    background-color: #c855c1; /* Or any color you prefer */
+    color: white; /* Change text color to white for better contrast */
+    border-color: #c855c1; /* Same color for the border */
+  }
+
+.interest.selected {
+  border-color: #c855c1; /* Border color when selected */
+  font-weight: bold;
+}
+
+
+.save-button {
+    width: calc(100% - 40px); /* Full width minus padding */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size: 18px;
+    background-color: #5cc75c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+  .save-button:hover {
+    background-color: #007700;
+  }
+
+
+

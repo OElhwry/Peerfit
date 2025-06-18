@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+p{
+    font-size: 22px;
+}
+  
+li{
+    font-size: 18px;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #333; /* Darken the sidebar background color */
+    color: #fff; /* Text color */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .sidebar a {
+    padding: 10px 5px; /* Add padding to links */
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 5px;
+  }
+  
+  .sidebar a.help-button {
+    margin-top: auto;
+  }
+  
+  .sidebar a:last-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #555; /* Darker line color */
+  }
+  
+  .sidebar a:last-child .logo img {
+    margin-right: 5px;
+  }
+  
+  .sidebar a:last-child .logo {
+    margin-top: auto;
+  }
+  
+  .sidebar a:hover {
+    background-color: #444; /* Darken on hover */
+  }
+
+  .sidebar a.active {
+    background-color: #555;
+  }
+  
+  .sidebar .icon {
+    background-color: #c2e8c2;
+    width: 100%;
+  }
+  
+  .secondary-sidebar {
+    height: 100%;
+    width: 350px;
+    background-color: white;
+    color: #333; /* Text color */
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  
+  .secondary-sidebar a {
+    padding: 10px 15px;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, background-color 0.3s;
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* Lighter border color */
+    display: flex; /* Ensure each link is on a new line */
+  }
+  
+  .secondary-sidebar a:hover {
+    color: #007bff; /* Blue on hover */
+    background-color: #f0f0f0;
+  }
+  
+  .secondary-sidebar a:hover::after {
+    content: '￫';
+    font-size: 16px;
+    margin-left: auto;
+    font-weight: bold;
+  }
+
+  .requests-container {
+    margin-left: 200px; /* Sidebar + Secondary Sidebar Width */
+    padding: 20px;
+  }
+  
+  .requests-received, .requests-sent {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  button {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .cancel-request-btn {
+    font-size: 16px;
+    padding: 0 8px;
+    line-height: 1;
+    height: 30px; /* Ensures a decent clickable area */
+    width: 30px; /* Keeps the button square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; /* Adds a bit of spacing between text and button */
+    background-color: transparent;
+    color: #666; /* A neutral, darker color */
+    border: none;
+    border-radius: 15px; /* Optional: rounds the corners of the button */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.cancel-request-btn:hover {
+    background-color: #f5f5f5; /* A light background on hover for feedback */
+    color: #d9534f; /* Change to a delete/warning color on hover */
+}
+
+  
+  @media (max-width: 992px) {
+    .secondary-sidebar {
+      display: none; /* Hide secondary sidebar on smaller screens */
+    }
+  
+    .requests-container {
+      margin-left: 20px; /* Adjust for smaller screens */
+      margin-right: 20px;
+      width: auto;
+    }
+  }
+
+  .request-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* Gives a light separator between items */
+}
+
+.request-item p {
+    margin: 0; /* Remove margin from paragraph to tighten up the layout */
+    flex-grow: 1; /* Ensures the paragraph takes up most of the space, pushing the button to the right */
+}

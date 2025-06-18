@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+.white-box {
+  background-color: white;
+  width: 50%;
+  height: 575px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p{
+  font-size: 22px;
+}
+
+li{
+  font-size: 18px;
+}
+
+.profile-icon {
+  width: 100px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.initials {
+  font-size: 36px;
+  color: white;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #333; /* Darken the sidebar background color */
+  color: #fff; /* Text color */
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.logo img {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.sidebar a {
+  padding: 10px 5px; /* Add padding to links */
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+}
+
+.sidebar a.help-button {
+  margin-top: auto;
+}
+
+.sidebar a:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #555; /* Darker line color */
+}
+
+.sidebar a:last-child .logo img {
+  margin-right: 5px;
+}
+
+.sidebar a:last-child .logo {
+  margin-top: auto;
+}
+
+.sidebar a:hover {
+  background-color: #444; /* Darken on hover */
+}
+
+.content {
+  padding: 20px;
+  margin-left: 200px;
+  box-sizing: border-box;
+}
+
+.sidebar a.active {
+  background-color: #555;
+}
+
+.sidebar .icon {
+  background-color: #c2e8c2;
+  width: 100%;
+}
+
+.secondary-sidebar {
+  height: 100%;
+  width: 350px;
+  background-color: white;
+  color: #333; /* Text color */
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.secondary-sidebar a {
+  padding: 10px 15px;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s, background-color 0.3s;
+  width: 100%;
+  border-bottom: 1px solid #ddd; /* Lighter border color */
+  display: flex; /* Ensure each link is on a new line */
+}
+
+.secondary-sidebar a:hover {
+  color: #007bff; /* Blue on hover */
+  background-color: #f0f0f0;
+}
+
+.secondary-sidebar a:hover::after {
+  content: '￫';
+  font-size: 16px;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.chat-container {
+    margin-left: 450px; /* Adjust based on your sidebar width */
+    padding: 20px;
+  }
+  
+  .messages {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #messageForm {
+    display: flex;
+  }
+  
+  #messageInput {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+
+  .user-selection-sidebar {
+    position: fixed; /* Ensures the sidebar stays in place while scrolling */
+    top: 0; /* Aligns to the top of the viewport */
+    left: 200px; /* Adjust based on your sidebar width */
+    bottom: 0; /* Extends to the bottom of the viewport */
+    width: 200px; /* Set the width of the user selection sidebar */
+    background-color: #fff; /* Light background color */
+    border-right: 1px solid #ddd; /* Adds a subtle border */
+    overflow-y: auto; /* Allows scrolling if the content exceeds the viewport height */
+    padding: 20px; /* Adds some padding around the content */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    z-index: 1000; /* Ensures the sidebar is above other content */
+}
+
+.user-selection-sidebar h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee; /* Adds a subtle line under the title for separation */
+    font-size: 18px; /* Adjusts the font size for the title */
+    color: #333; /* Dark color for the title for better readability */
+}
+
+.user {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9; /* Slightly off-white background for each user */
+    border-radius: 4px; /* Softens the corners */
+    cursor: pointer; /* Changes the cursor to indicate the item is clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.user:hover {
+    background-color: #e6e6e6; /* Darkens the user item on hover */
+}
+
+.user + .user {
+    margin-top: 5px; /* Reduces space between user items */
+}
+
+
+.chat-header {
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+  
+/* Ensures no underlining for any text within the message container */
+a {
+    text-decoration: none; 
+}
+
+/* Base container for each message */
+.message-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align right for own messages */
+    margin: 10px;
+    max-width: 80%;
+}
+
+.message-block.message-received {
+    align-items: flex-start; /* Align left for received messages */
+}
+
+/* Container for the message bubble */
+.message-content {
+    padding: 8px 12px; /* Adjusted padding to fit the text */
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 4px;
+    word-break: break-word; /* Ensure long words do not overflow */
+}
+
+.message-own .message-content {
+    background-color: #dcf8c6; /* Light green background for own messages */
+}
+
+.message-received .message-content {
+    background-color: #fff; /* White background for received messages */
+}
+
+/* Styling for the sender's name and timestamp */
+.sender-info {
+    align-self: flex-start; /* Align left for all sender info */
+    margin-bottom: 4px; /* Space between the sender info and the message */
+    text-align: left; /* Align text to the left */
+}
+
+.message-own .sender-info {
+    align-self: flex-end; /* Align right for own message sender info */
+    text-align: right; /* Align text to the right */
+}
+
+.sender-name, .message-timestamp {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Style the form overall */
+#messageForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-top: 1px solid #e0e0e0; /* Light grey border */
+  }
+  
+  /* Style the message input field */
+  #messageInput {
+    flex-grow: 1; /* Allows input to fill available space */
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 20px; /* Rounded borders */
+    margin-right: 10px; /* Spacing between input and button */
+    font-size: 16px; /* Increase font size for better readability */
+    outline: none; /* Removes the default focus outline */
+  }
+  
+  /* Style changes when the input is focused */
+  #messageInput:focus {
+    border-color: #a2a2a2; /* Slightly darker border on focus */
+  }
+  
+  /* Style the send button */
+  #messageForm button {
+    padding: 10px 20px;
+    background-color: #5cb85c; /* Bootstrap 'success' green */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded borders */
+    cursor: pointer; /* Changes cursor to indicate button */
+    font-size: 16px; /* Matches input font size */
+    outline: none; /* Removes the default focus outline */
+  }
+  
+  /* Style changes for the send button on hover */
+  #messageForm button:hover {
+    background-color: #4cae4c; /* A slightly darker green on hover */
+  }
+  
+  /* Style changes for the send button on click (active state) */
+  #messageForm button:active {
+    background-color: #449d44; /* An even darker green when button is clicked */
+  }
+
+  #user-search {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #searchInput {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  

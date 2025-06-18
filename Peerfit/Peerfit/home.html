@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="home.css">
+  <script src="sidebar.js"></script>
+  <title>Home Page - PeerFit</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="icon">
+          <a href="home.html"><img src="Images/PeerFitLogo.jpg" alt="PeerFit Logo" width="100%" height="100%"></a>
+      </div>
+
+      <a href="home.html">
+        <div class="logo">
+          <img src="Images/home.png" alt="Logo 1" width="30">
+        </div>
+        Home
+      </a>
+    
+      <a href="#profile">
+        <div class="logo">
+          <img src="Images/User.png" alt="Logo 1" width="30">
+        </div>
+        Profile
+      </a>
+        
+      <a href="chat.php">
+        <div class="logo">
+          <img src="Images/Chat.png" alt="Logo 2" width="30">
+        </div>
+        Chat
+      </a>
+        
+      <a href="requests.php">
+        <div class="logo">
+          <img src="Images/Request.png" alt="Logo 3" width="30">
+        </div>
+        Requests
+      </a>
+
+      <a href="Startup.html">
+        <div class="logo">
+          <img src="Images/SignOut.png" alt="PeerFit Logo" width="30">
+        </div>
+        Sign out
+      </a>
+      
+      <a href="#" onclick="document.getElementById('helpModal').style.display='block'" class="help-button">
+        <div class="logo">
+          <img src="Images/help.png" alt="Help Icon" width="30">
+        </div>
+        Help
+      </a>
+
+      <!-- The Modal -->
+      <div id="helpModal" class="modal">
+        <div class="modal-content">
+          <span onclick="document.getElementById('helpModal').style.display='none'" class="close">&times;</span>
+          <h2>Report a Problem</h2>
+          <form id="helpForm" method="post">
+            <label for="report">Describe your issue:</label>
+            <textarea id="report" name="report" required></textarea>
+            <input type="submit" value="Submit">
+          </form>          
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="secondary-sidebar">
+      <h2>Account</h2>
+      <a href="Profile.php">
+        <div class="item">
+          <div class="logo"><img src="Images/User_grey.png" alt="Profile Logo" width="30"></div>
+          <span>Profile</span>
+        </div>
+      </a>
+      <a href="account.php">
+        <div class="item">
+          <div class="logo"><img src="Images/lock.png" alt="Account Logo" width="30"></div>
+          <span>Account</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="content">
+      <iframe src="match_users.php"></iframe>
+    </div>
+
+    
+  </div>
+</body>
+<script>
+  document.getElementById('helpForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+  
+    var formData = new FormData(this); 
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'submit_help.php', true); 
+  
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        console.log('Success:', xhr.responseText);
+        alert('Report submitted successfully.'); 
+        document.getElementById('helpForm').reset();
+      } else {
+        console.error('Failure:', xhr.responseText);
+        alert('An error occurred. Please try again.');
+      }
+    };
+  
+    xhr.onerror = function() {
+      console.error('Request failed');
+      alert('An error occurred during your request. Please try again.');
+    };
+  
+    xhr.send(formData); 
+  });
+  </script>
+  
+</html>

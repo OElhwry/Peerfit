@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Startup.css">
+  <script src="js/script.js"></script>
+  <title>PeerFit - Connect and Play Sports</title>
+</head>
+<body>
+  <div class="slideshow-container">
+    <!-- Slide 1: Join Now -->
+    <div class="slide">
+      <div class="taskbar">
+        <div class="logo">
+          <img src="Images/PeerFitLogo.jpg" alt="PeerFit Logo" width="100">
+        </div>
+        <div class="navigation">
+          <a class="active" href="#" onclick="showSlide(0)">Home</a>
+          <a href="#" onclick="showSlide(1)">How It Works</a>
+          <a href="#" onclick="showSlide(2)">About Us</a>
+        </div>
+        <div class="join-now">
+          <a href="signup.php">Join Now</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header">
+          <h1>Discover Your <br>Perfect Sports <br> Match In Minutes</h1>
+          <p class="description">Discover your ideal sports partners and get active in minutes. Join PeerFit for an exciting journey into the world of sports and fitness.</p>
+          <a class="join-now" href="signup.php">Join Now</a>
+        </div>
+        <div class="image">
+          <img src="Images/DiverseAthlete.jpg" alt="Diverse Athlete" width="700">
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: How It Works -->
+    <div class="slide">
+      <div class="taskbar">
+        <div class="logo">
+          <img src="Images/PeerFitLogo.jpg" alt="PeerFit Logo" width="100">
+        </div>
+        <div class="navigation">
+          <a href="#" onclick="showSlide(0)">Home</a>
+          <a class="active" href="#" onclick="showSlide(1)">How It Works</a>
+          <a href="#" onclick="showSlide(2)">About Us</a>
+        </div>
+        <div class="join-now">
+          <a href="signup.php">Join Now</a>
+        </div>
+      </div>
+      <div class="how-it-works">
+        <h2>How It Works</h2>
+        <p class="description">Discovering your sports journey is as easy as 1-2-3. Select your favorite sports, connect with friends, and set up a fun meetup to play. <br>PeerFit makes sports and fitness more accessible than ever.</p>
+        <div class="how-it-works-items">
+          <div class="how-it-works-item">
+            <img src="Images/Sport_Picker.jpg" alt="Select Sports" height="302">
+            <h3>&#9312; Select Sports</h3> 
+          </div>
+          <div class="how-it-works-item">
+            <img src="Images/Friend_Picker.jpg" alt="Request Friends" height="302">
+            <h3>&#9313; Request Friends</h3> 
+          </div>
+          <div class="how-it-works-item">
+            <img src="Images/Play_Together.jpg" alt="Meetup & Play" height="302">
+            <h3>&#9314; Meetup & Play</h3> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: About Us -->
+    <div class="slide">
+      <div class="taskbar">
+        <div class="logo">
+          <img src="Images/PeerFitLogo.jpg" alt="PeerFit Logo" width="100">
+        </div>
+        <div class="navigation">
+          <a href="#" onclick="showSlide(0)">Home</a>
+          <a href="#" onclick="showSlide(1)">How It Works</a>
+          <a class="active" href="#" onclick="showSlide(2)">About Us</a>
+        </div>
+        <div class="join-now">
+          <a href="signup.php">Join Now</a>
+        </div>
+      </div>
+      <div class="about-us">
+        <h2>About Us</h2>
+      <div class="section">
+        <h3>Introduction to Our Brand</h3>
+        <p>We are PeerFit, a passionate community dedicated to connecting individuals through sports and fitness. Our journey began with a vision to make sports and fitness accessible to everyone. We believe in the power of sports to create lasting bonds and promote a healthier lifestyle for all.</p>
+      </div>
+      <div class="section">
+        <h3>Mission and Vision</h3>
+        <p>Our mission is to empower individuals to discover their perfect sports match, fostering an active and healthier lifestyle. We envision a world where sports unite people, promoting well-being and happiness. Through our platform, we aim to provide a seamless and enjoyable experience for all sports enthusiasts, enabling them to connect, play, and stay active.</p>
+      </div>
+      <div class="section">
+        <h3>Values and Principles</h3>
+        <p>We are driven by core values of inclusivity, dedication, and community. Our principles guide us to provide exceptional experiences, encourage growth, and create a positive impact on the lives we touch. Inclusivity is at the heart of everything we do, ensuring that everyone feels welcome and valued in our diverse community.</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(n) {
+      slides.forEach((slide) => (slide.style.display = 'none'));
+      slides[n].style.display = 'block';
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

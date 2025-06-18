@@ -1,0 +1,220 @@
+.taskbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.taskbar .logo {
+  margin-left: 20px;
+}
+
+.taskbar .logo img {
+  width: 150px; /* Adjust the width as needed */
+}
+
+.taskbar .navigation {
+  display: flex;
+  align-items: center;
+}
+
+.taskbar .navigation a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.navigation a.active {
+  font-size: 20px; /* Adjust the size to your preference */
+  font-weight: bold;
+  /* Add any other styles you want for the active taskbar item */
+}
+
+.taskbar .join-now {
+  color: white;
+  font-size: 22px;
+  background-color: #5cc75c;
+  padding: 5px 15px 10px 15px;
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+.join-now {
+  color: white;
+  font-size: 24px;
+  background-color: #5cc75c;
+  padding: 5px 15px 10px 15px;
+  border-radius: 20px;
+}
+
+.taskbar .join-now:hover {
+  background-color: #007700;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.header {
+  text-align: left;
+  padding: 50px;
+  font-size: 26px;
+  margin-right: 120px;
+  margin-bottom: 100px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  position: relative;
+}
+
+.caption {
+  max-width: 50%;
+  margin-right: 20px;
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.description {
+  font-size: 20px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  max-width: 50%;
+}
+
+.image img {
+  text-align: center;
+  border: 5px solid #5cc75c;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+.how-it-works {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.how-it-works h2 {
+
+  font-size: 52px;
+  color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 20px;
+}
+
+.how-it-works-items {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.how-it-works-item {
+  max-width: 30%;
+}
+
+.how-it-works-item img {
+  width: 100%;
+  border: 5px solid #00aa00;
+  border-radius: 15px;
+}
+
+.how-it-works-item h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.slide .container  {
+  margin-top: 70px; /* Adjust as needed */
+}
+
+.slide .how-it-works {
+  margin-top: 140px; /* Adjust as needed */
+}
+
+.slide .about-us {
+  margin-top: 100px; /* Adjust as needed */
+}
+
+
+.navigation-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+.about-us {
+  padding: 2px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+  font-size: 46px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section {
+  background-color: #f9f9f9;
+  padding: 2px;
+  border-radius: 10px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.section h3 {
+  font-size: 27px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 20px;
+  color: #666;
+}
